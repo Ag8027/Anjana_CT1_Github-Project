@@ -34,12 +34,12 @@ int main()
                 } else if (n2 == 2){
                     delivamt = 3;
                     // Delivery amount changes with each category.
-                    printf("\n1 - Crab Cakes: $3\n2 - Fillet Mignon: $6\n3 - Seafood Pasta: $8\n4 - Chicken Rice: $10\n");
+                    printf("\n1 - Crab Cakes: $3\n2 - Filet Mignon: $6\n3 - Seafood Pasta: $8\n4 - Chicken Rice: $10\n");
                     // List of food for the Non - Vegetarian section are displayed along with their costs.
                     scanf("%d", &n3);
                     switch(n3){
                         case (1): printf("\nOne of Crab Cakes has been added."); foodcost = 3; break;
-                        case (2): printf("\nOne Fillet Mignon has been added."); foodcost = 6; break;
+                        case (2): printf("\nOne Filet Mignon has been added."); foodcost = 6; break;
                         case (3): printf("\nOne Seafood Pasta has been added."); foodcost = 8; break;
                         case (4): printf("\nOne Chicken Rice has been added."); foodcost = 10; break;
                         default: printf("Invalid Choice. Try again using 1,2,3 or 4.\n"); break;
@@ -48,12 +48,12 @@ int main()
                     } else if (n2 == 3){
                         delivamt = 5;
                         // Delivery amount changes with each category.
-                        printf("\n1 - Veg Salad and Crab Cakes: $5\n2 - Noodles and Fillet Mignon: $10\n3 - Mushroom and Seafood Pasta: $13\n4 - Fried and Chicken Rice: $15\n");
+                        printf("\n1 - Veg Salad and Crab Cakes: $5\n2 - Noodles and Filet Mignon: $10\n3 - Mushroom and Seafood Pasta: $13\n4 - Fried and Chicken Rice: $15\n");
                         // List of food for Veg and Non-Veg sections are displayed along with their costs.
                         scanf("%d", &n3);
                         switch(n3){
                             case (1): printf("\nOne Veg salad and Crab cakes have been added."); foodcost = 5; break;
-                            case (2): printf("\nOne Veg Noodles and Fillet Mignon have been added."); foodcost = 10; break;
+                            case (2): printf("\nOne Veg Noodles and Filet Mignon have been added."); foodcost = 10; break;
                             case (3): printf("\nOne Mushroom and Seafood Pasta have been added."); foodcost = 13; break;
                             case (4): printf("\nOne Fried and Chicken Rice have been added."); foodcost = 15; break;
                             default: printf("Invalid Choice. Try again using 1,2,3 or 4.\n"); break;
