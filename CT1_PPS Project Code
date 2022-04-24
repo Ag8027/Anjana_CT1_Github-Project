@@ -6,17 +6,22 @@ int main()
     printf("Welcome to Friggy's online food ordering services!\nPlease note that only one order can be placed per item.");
     printf("\nWhat would you like to do? \n1 - order now\n2 - exit\n");
     int n1, foodcost, number, delivamt, totalcost;
+    // foodcost is the cost of the food ordered, number refers to the user's phone number, delivamt is the delivery charge, totalcost is the total amount to be paid by the user.
     char name[20]; char address[100];
+    // name - name of the user placing the order, address - address to which the food needs to be delivered.
     scanf("%d", &n1);
     if (n1 == 1){
         int n2;
         printf("\nChoose your preference: \n1 - Vegetarian\n2 - Non Vegetarian\n3 - Both\n");
+        // Choosing a number from above displays a list of food under each category.
         scanf("%d", &n2);
         printf("\nWhat would you like to order?");
         int n3;
             if (n2 == 1){
                 delivamt = 2;
+                // Delivery amount changes with each category.
                 printf("\n1 - Salad: $2\n2 - Veg Noodles: $4\n3 - Mushroom pasta: $5\n4 - Fried Rice: $5\n");
+                // List of food for the Vegetarian section are displayed along with their costs.
                 scanf("%d", &n3);
                 switch(n3){
                     case (1): printf("\nOne Veg salad has been added."); foodcost = 2; break;
@@ -24,10 +29,13 @@ int main()
                     case (3): printf("\nOne Mushroom Pasta has been added."); foodcost = 5; break;
                     case (4): printf("\nOne Fried Rice has been added."); foodcost = 5; break;
                     default: printf("Invalid Choice. Try again using 1,2,3 or 4.\n"); break;
+                    // Entering any number other than the provided ones prints the above (default) statement, and requires re-running the program.
                 }
                 } else if (n2 == 2){
                     delivamt = 3;
+                    // Delivery amount changes with each category.
                     printf("\n1 - Crab Cakes: $3\n2 - Fillet Mignon: $6\n3 - Seafood Pasta: $8\n4 - Chicken Rice: $10\n");
+                    // List of food for the Non - Vegetarian section are displayed along with their costs.
                     scanf("%d", &n3);
                     switch(n3){
                         case (1): printf("\nOne of Crab Cakes has been added."); foodcost = 3; break;
@@ -35,10 +43,13 @@ int main()
                         case (3): printf("\nOne Seafood Pasta has been added."); foodcost = 8; break;
                         case (4): printf("\nOne Chicken Rice has been added."); foodcost = 10; break;
                         default: printf("Invalid Choice. Try again using 1,2,3 or 4.\n"); break;
+                        // Entering any number other than the provided ones prints the above (default) statement, and requires re-running the program.
                                     }
                     } else if (n2 == 3){
                         delivamt = 5;
+                        // Delivery amount changes with each category.
                         printf("\n1 - Veg Salad and Crab Cakes: $5\n2 - Noodles and Fillet Mignon: $10\n3 - Mushroom and Seafood Pasta: $13\n4 - Fried and Chicken Rice: $15\n");
+                        // List of food for Veg and Non-Veg sections are displayed along with their costs.
                         scanf("%d", &n3);
                         switch(n3){
                             case (1): printf("\nOne Veg salad and Crab cakes have been added."); foodcost = 5; break;
@@ -46,23 +57,27 @@ int main()
                             case (3): printf("\nOne Mushroom and Seafood Pasta have been added."); foodcost = 13; break;
                             case (4): printf("\nOne Fried and Chicken Rice have been added."); foodcost = 15; break;
                             default: printf("Invalid Choice. Try again using 1,2,3 or 4.\n"); break;
+                            // Entering any number other than the provided ones prints the above (default) statement, and requires re-running the program.
                                         }
                         }
                 if ((n3 < 5) && (n3 > 0)) {
+                // When the number chosen in appropriate to the options provided, the details of the amount to be paid are displayed.
                 printf("\nCost of food: $%d", foodcost);
                 printf("\nDelivery Charges: $%d", delivamt);
                 totalcost = foodcost + delivamt;
                 printf("\nTotal cost: $%d + $%d = $%d", foodcost, delivamt, totalcost);
                 printf("\nYou need to pay: $%d.\n", totalcost);
-
+                // The user is prompted to enter their details to proceed with placing the order.
                 printf("\nPlease enter your details.\n");
                 printf("Name: "); scanf("%s", name);
                 printf("Phone Number: "); scanf("%d", &number);
                 printf("Address: "); scanf("%s", address);
                 printf("\nThank you for ordering from us, %s! Your food will reach you in 20 minutes.\n", name);
+                // A Thank you message is printed with the user's entered name. 
                 } else {
                 }
                 } else if (n1 == 2)
+                        // When the user chooses to exit the page, the program terminates and executes the code below.
                         printf("\nYou have exited the page.\n");
 
     return 0;
